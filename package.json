@@ -1,0 +1,27 @@
+{
+  "name": "upc",
+  "version": "1.0.0",
+  "description": "Universal Program Converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PROPHESSOR/UPC.git"
+  },
+  "keywords": [
+    "converter",
+    "translator",
+    "upc",
+    "universal",
+    "program",
+    "converter"
+  ],
+  "author": "PROPHESSOR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PROPHESSOR/UPC/issues"
+  },
+  "homepage": "https://github.com/PROPHESSOR/UPC#readme"
+}
