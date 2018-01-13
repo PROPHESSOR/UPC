@@ -12,7 +12,7 @@ const fs = require('fs');
 const args = process.argv.splice(process.execArgv.length + 2);
 const [TYPE, FROM, TO] = args;
 
-if (!(TYPE && FROM && TO)) return console.log('usage: <type> <from> <to>');
+if (!(TYPE && FROM)) return console.log('usage: <type> <from> [<to>]');
 
 let Translator;
 
@@ -25,8 +25,9 @@ try {
 
 const translator = new Translator(fs.readFileSync(FROM, 'utf8'));
 
-fs.writeFileSync(TO, translator.translate(), 'utf8');
+if (TO) fs.writeFileSync(TO, translator.translate(), 'utf8');
+else console.log(translator.translate());
 
-console.info("OK!");
+console.info('OK!');
 
 return 0;

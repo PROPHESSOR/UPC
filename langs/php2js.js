@@ -104,8 +104,10 @@ class Translator {
 			// Избавляемся от кастомных типов, но оставляем подсказки
 			.replace(/#/g, '//')
 			// Ещё один вид комментариев
-			.replace(/=>/g, ':'); //eslint-disable-line
-		// В объектах
+			.replace(/=>/g, ':') //eslint-disable-line
+			// В объектах
+			.replace(/\/\* static \*\/ function/g, 'static');
+			// static только в методах класса, приводим в нормальный вид
 		return API + this.data;
 	}
 
